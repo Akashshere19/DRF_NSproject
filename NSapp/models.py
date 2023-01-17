@@ -12,5 +12,5 @@ class Instructor(models.Model):
 
 class Course(models.Model):
     title  = models.CharField(max_length=30)
-    rating = models.EmailField()
+    rating = models.IntegerField()
     instructor  = models.ForeignKey(Instructor,on_delete=models.CASCADE,related_name='courses')          
